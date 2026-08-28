@@ -134,8 +134,8 @@
     <p class="applies">
       Applies to the Chrome extensions <strong>Case Changer</strong>,
       <strong>Character Counter for X, Bluesky &amp; Threads</strong>,
-      <strong>Bulk Unit Price &amp; Grocery Comparison Tool</strong>, and
-      <strong>Plain Text</strong>.
+      <strong>Unit Price Calculator</strong>,
+      <strong>Plain Text</strong>, and <strong>Tab Limiter</strong>.
     </p>
     <p class="updated">Last updated: 28 August 2026</p>
   </header>
@@ -157,13 +157,36 @@
     page, changes its capitalisation, and can write the result back where you found
     it. Saved snippets are stored on your own machine only.</li>
     <li><strong>Character Counter</strong> counts the draft you type against the
-    selected platform's limit and, for premium users, splits it into numbered posts.
-    Your draft is stored locally so it survives closing the popup.</li>
-    <li><strong>Bulk Unit Price</strong> works out the price per item, per weight or
-    per volume from the price and quantity you type in.</li>
+    selected platform's limit, reports its word and sentence count and how long it
+    would take to read or say aloud, and for premium users splits it into numbered
+    posts. Your draft is stored locally so it survives closing the popup.</li>
+    <li><strong>Unit Price Calculator</strong> works out the price per item, per
+    weight or per volume from the price and quantity you type in.</li>
     <li><strong>Plain Text</strong> reads your clipboard when you click the clean
     button, strips the formatting from it, and writes plain text back to your
     clipboard.</li>
+    <li><strong>Tab Limiter</strong> counts how many tabs you have open and closes a
+    new one when it would take you past the limit you set. See the note below for
+    exactly what it keeps.</li>
+  </ul>
+
+  <h2>Tab Limiter, specifically</h2>
+
+  <p>Tab Limiter is the only one of these extensions that can see anything about your
+  browsing, so it is worth being precise about it:</p>
+
+  <ul>
+    <li>It counts your open tabs, and reads the address and title of a
+    <strong>new</strong> tab at the moment that tab would exceed your limit.</li>
+    <li>When it closes such a tab, it saves that address and title to a local list, so
+    you can reopen what was blocked from the popup.</li>
+    <li>That list lives in local storage on your machine, holds at most the 25 most
+    recent entries, can be cleared from the popup, and is deleted when you uninstall
+    the extension.</li>
+    <li>It is never transmitted. It is not sent to us, and no part of it is included
+    in the licence check described below.</li>
+    <li>Tab Limiter does not read the content of any page, and does not track tabs you
+    already had open.</li>
   </ul>
 
   <h2>What is stored on your device</h2>
@@ -239,6 +262,14 @@
           <td>Writes the cleaned plain text back to your clipboard.</td>
         </tr>
         <tr>
+          <td><code>tabs</code><br><span style="color:var(--faint);font-weight:400">Tab Limiter</span></td>
+          <td>Counts how many tabs are open, and closes a new one that would take you past your limit.</td>
+        </tr>
+        <tr>
+          <td><code>notifications</code><br><span style="color:var(--faint);font-weight:400">Tab Limiter</span></td>
+          <td>Tells you that a tab was blocked, and why.</td>
+        </tr>
+        <tr>
           <td>Access to <code>extensionpay.com</code><br><span style="color:var(--faint);font-weight:400">all</span></td>
           <td>Required by the payment library to confirm a completed purchase. Applies to that one site and to no other.</td>
         </tr>
@@ -267,7 +298,7 @@
 
   <footer>
     Case Changer &middot; Character Counter for X, Bluesky &amp; Threads &middot;
-    Bulk Unit Price &middot; Plain Text
+    Unit Price Calculator &middot; Plain Text &middot; Tab Limiter
   </footer>
 
 </main>
