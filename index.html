@@ -135,7 +135,9 @@
       Applies to the Chrome extensions <strong>Case Changer</strong>,
       <strong>Character Counter for X, Bluesky &amp; Threads</strong>,
       <strong>Unit Price Calculator</strong>,
-      <strong>Plain Text</strong>, and <strong>Tab Limiter</strong>.
+      <strong>Plain Text</strong>, <strong>Tab Limiter</strong>,
+      <strong>Hex Color Picker</strong>, <strong>Recipe Scaler</strong>, and
+      <strong>Date Calculator</strong>.
     </p>
     <p class="updated">Last updated: 28 August 2026</p>
   </header>
@@ -168,6 +170,14 @@
     <li><strong>Tab Limiter</strong> counts how many tabs you have open and closes a
     new one when it would take you past the limit you set. See the note below for
     exactly what it keeps.</li>
+    <li><strong>Hex Color Picker</strong> uses your browser's built-in eyedropper to
+    sample the colour of a pixel you click on, and converts it between colour
+    formats. It reads a single colour value, never the content of the page.</li>
+    <li><strong>Recipe Scaler</strong> multiplies or divides the ingredient
+    quantities you paste in, and converts between metric and imperial measures.</li>
+    <li><strong>Date Calculator</strong> adds or subtracts days from a date you
+    enter, or counts the days between two dates. The bank-holiday dates are worked
+    out in code, not looked up online.</li>
   </ul>
 
   <h2>Tab Limiter, specifically</h2>
@@ -281,6 +291,10 @@
   browse. Case Changer only ever sees text you have deliberately highlighted, on the
   tab where you opened it.</p>
 
+  <p>Hex Color Picker, Recipe Scaler and Date Calculator request no permissions at all
+  beyond <code>storage</code>. The colour picker uses Chrome's own EyeDropper, which
+  the browser runs on your behalf and which needs no access to any page.</p>
+
   <h2>Children</h2>
 
   <p>These are general-purpose tools and are not directed at children under 13.
@@ -298,7 +312,8 @@
 
   <footer>
     Case Changer &middot; Character Counter for X, Bluesky &amp; Threads &middot;
-    Unit Price Calculator &middot; Plain Text &middot; Tab Limiter
+    Unit Price Calculator &middot; Plain Text &middot; Tab Limiter &middot;
+    Hex Color Picker &middot; Recipe Scaler &middot; Date Calculator
   </footer>
 
 </main>
